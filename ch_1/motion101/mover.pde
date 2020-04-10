@@ -1,13 +1,16 @@
 class Mover {
     PVector location;
     PVector velocity;
+    PVector acceleration;
 
     Mover() {
-        location = new PVector(random(width), random(height));
-        velocity = new PVector(random(-2, 2), random(-2, 2));
+        location = new PVector(width/2, height/2);
+        velocity = new PVector(0, 0);
+        acceleration = new PVector(-0.001, 0.01);
     }
 
     void update() {
+        velocity.add(acceleration);
         location.add(velocity);
     }
 
