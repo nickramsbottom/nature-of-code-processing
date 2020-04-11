@@ -2,13 +2,12 @@ class Mover {
 	PVector location;
 	PVector velocity;
 	PVector acceleration;
-
 	float mass;
 
-	Mover(float m, float x, float y) {
-		mass = m;
-		location = new PVector(x, y);
-		velocity = new PVector(0, 0);
+	Mover() {
+		mass = 1;
+		location = new PVector(400, 50);
+		velocity = new PVector(1, 0);
 		acceleration = new PVector(0, 0);
 	}
 
